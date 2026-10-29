@@ -6,7 +6,7 @@ const { randomUUID } = require('node:crypto');
 const { WebSocketServer, WebSocket } = require('ws');
 
 const PORT = Number(process.env.PORT || 3000);
-const PUBLIC = path.join(__dirname, 'public');
+const PUBLIC = __dirname;
 const rooms = new Map();
 const mime = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.png': 'image/png', '.jpg': 'image/jpeg', '.svg': 'image/svg+xml' };
 const bounded = (n, a, b) => Math.max(a, Math.min(b, n));
